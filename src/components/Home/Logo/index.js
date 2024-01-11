@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 import React, { useEffect, useRef } from 'react';
 import LogoS from '../../../assets/images/logo-s.png';
 import './index.scss';
@@ -20,56 +19,16 @@ const Logo = () => {
     outlineLogoRef.current.classList.add('draw-outline');
     solidLogoRef.current.classList.add('fade-in-solid');
   }, []);
-=======
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap-trial'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
-import LogoS from '../../../assets/images/logo-s.png'
-import './index.scss'
-import { motion } from "framer-motion";
-
-const Logo = () => {
-  // const bgRef = useRef()
-  // const outlineLogoRef = useRef()
-  // const solidLogoRef = useRef()
-
-  // useEffect(() => {
-  //   gsap.registerPlugin(DrawSVGPlugin)
-
-  //   gsap
-  //     .timeline()
-  //     .to(bgRef.current, {
-  //       duration: 10,
-  //       opacity: 1,
-  //     })
-  //     .from(outlineLogoRef.current, {
-  //       drawSVG: 0,
-  //       duration: 20,
-  //     })
-
-  //   gsap.fromTo(
-  //     solidLogoRef.current,
-  //     {
-  //       opacity: 0,
-  //     },
-  //     {
-  //       opacity: 1,
-  //       delay: 4,
-  //       duration: 4,
-  //     }
-  //    )
-  // }, [])
->>>>>>> Stashed changes
 
   return (
-    <div className="logo-container" >
+    <div className="logo-container" ref={bgRef}>
       <img
         className="solid-logo"
+        ref={solidLogoRef}
         src={LogoS}
         alt="JavaScript, Developer"
       />
 
-<<<<<<< Updated upstream
       <svg
         width="559pt"
         height="897pt"
@@ -91,15 +50,5 @@ const Logo = () => {
     </div>
   );
 };
-=======
-    <motion.svg>
-      
-    </motion.svg>
-
-    </div>
-
-  )
-}
->>>>>>> Stashed changes
 
 export default Logo;
